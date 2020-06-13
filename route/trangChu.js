@@ -8,7 +8,7 @@
  const express = require('express');
  const route = express.Router();
 
- const controller = require('../controller/readNews');
+ const controller = require('../controller/trangChu');
 
  route.get('/',controller.Open);
 

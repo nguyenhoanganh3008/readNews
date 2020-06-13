@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content_app{
+    border: 2px solid black;
+    margin-bottom: 20px;
+}
