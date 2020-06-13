@@ -4,7 +4,35 @@
     box-sizing: border-box;
 }
 
-.content_app{
-    border: 2px solid black;
+/* ==================================LOGO=============================== */
+.text-muted img{
+    width: 300px;
+}
+
+/* ==================================CONTENT============================ */
+.container_app{
     margin-bottom: 20px;
+    
+}
+
+.content_app{
+    margin-bottom: 20px;
+    width: 700px;
+    background-image: linear-gradient(#B4B4B4,#ffffff);
+}
+
+.title{
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+.image img{
+    width: 300px;
+}
+
+.description{
+    font-size: 20px;
+    font-weight: 500;
 }

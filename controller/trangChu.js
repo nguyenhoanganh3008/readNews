@@ -11,7 +11,7 @@ module.exports.Open = function (req, res) {
   (async () => {
 
     let feed = await parser.parseURL('https://vnexpress.net/rss/tin-moi-nhat.rss');
-    console.log(feed.title);
+    // console.log(feed.title);
 
     // feed.items.forEach(item => {
     //   console.log(item)

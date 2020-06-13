@@ -9,6 +9,7 @@
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
     <title>MyAPP - Thời Sự</title>
+    <link rel="stylesheet" href="../css/readNews.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/blog/">
@@ -27,7 +28,7 @@
       <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
           <div class="col-4 pt-1">
-            <a class="text-muted" href="#">Logo</a>
+            <a class="text-muted" href="/trangChu"><img src="../img/logoNews.png" alt="logo"></a>
           </div>
         </div>
       </header>
@@ -44,7 +45,37 @@
         </nav>
       </div>
 
-     
+      <% datas.forEach(item =>{ %>
+        <div class="container container_app">
+          <div class="row justify-content-start content_app">
+            <div class="col-6">
+              <div class="title">
+                <%= item.title %>
+              </div>
+              <div class="date">
+                <%= item.pubDate %>
+              </div>
+            </div>
+            <div class="col-4">
+    
+            </div>
+          </div>
+          <div class="row justify-content-start">
+            <div class="col-4">
+              <div class="image">
+                  <a href="<%= item.link %>+?view=app&&night_mode=1">
+                    <%- item.content.slice(item.content.search("img src")-1 , item.content.search("br")) %>
+                  </a>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="description">
+                <%= item.contentSnippet %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% })%>
 
 
     <!-- Bootstrap core JavaScript
